@@ -1,0 +1,7 @@
+<!-- bicycles/templates/bicycles/bicycle_list.html -->
+<h1>Bicycle List</h1>
+<ul>
+    {% for bicycle in bicycles %}
+        <li>{{ bicycle.name }} - {{ bicycle.model }}</li>
+    {% endfor %}
+</ul>
