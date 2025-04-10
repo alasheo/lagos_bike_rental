@@ -1,0 +1,23 @@
+{% extends "admin/base_site.html" %}
+
+{% block content %}
+    <div id="content-main">
+        <h1>Welcome to Lagos Bike Rental Admin</h1>
+        <p>Please log in to continue.</p>
+
+        <form method="post" class="form-horizontal">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <div class="form-row">
+                <div class="form-group">
+                    <button type="submit" class="btn btn-primary">Log in</button>
+                </div>
+            </div>
+        </form>
+
+        <div class="alert alert-info">
+            <strong>Note:</strong> If you encounter any issues, please contact support.
+        </div>
+    </div>
+{% endblock %}
